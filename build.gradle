@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.retrofit_version = "2.9.0"
+    ext.lifecycle_version = "2.5.1"
+    ext.room_version = "2.4.3"
+    ext.fragment_version = '1.5.4'
+    ext.hiltVersion = '2.44.2'
+    ext.androidXTestCoreVersion = '1.5.0'
+    ext.androidXTestExtKotlinRunnerVersion = '1.1.4'
+    ext.androidXTestRulesVersion = '1.5.0'
+    ext.espressoVersion = '3.5.0'
+    ext.navigationVersion = '2.6.0-alpha02'
+    ext.coroutines_version = '1.6.4'
+    ext.coroutinesTest = '1.7.21'
+    ext.nav_version = "2.5.2"
+    ext.mockitoVersion = '4.8.1'
+    ext.mockitoKotlin = "4.0.0"
+    ext.mockkVersion = '1.13.2'
+    ext.detektVersion = '1.18.1'
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.44.2'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.3.1' apply false
+    id 'com.android.library' version '7.3.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.20' apply false
+}
